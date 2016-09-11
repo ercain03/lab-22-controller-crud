@@ -24,7 +24,7 @@ module.exports = {
     return [autoprefixer];
   },
   sassLoader: {
-    include: [`${__dirname}/app/scss/lib`]
+    includePaths: [`${__dirname}/app/scss/lib`]
   },
   module: {
     loaders: [
@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.(jpg|gif)$/,
-        loader: 'file?name=img/[hash]-[name].[ext]'
+        loader: 'file?name=image/[hash]-[name].[ext]'
       },
       {
         test: /\.(woff|svg|eot|ttf).*/,
