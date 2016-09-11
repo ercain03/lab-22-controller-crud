@@ -1,0 +1,36 @@
+@import "./vendor/bootstrap/css/bootstrap.css";
+// @import "./vendor/font-awesome-4.6.3/scss/font-awesome.scss";
+@import "./lib/_theme";
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  margin-left: 30px;
+  font-family: cursive;
+}
+
+.form-group {
+  margin-top: 50px;
+  width: 50%;
+}
+
+ol {
+    border-radius: 15px;
+    border: 2px ridge $secondary-color;
+    width: 95%;
+    padding: 10px;
+    margin-top: 15px;
+    li {
+      padding: 5px;
+      margin-left: 10px;
+      font-size: 18px;
+      button {
+        margin: 5px;
+      }
+    }
+  }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="listApp">
+  <head>
+    <title>List App</title>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="bundle.css" />
+  </head>
+
+  <body>
+    <main ng-controller="ListController as listCtrl">
+      <form class="form-block" novalidate ng-submit="listCtrl.createList(listCtrl.list)">
+
+        <div class="form-group">
+          <label for="name">Note:</label>
+          <input name="name" type="text" class="form-control" ng-model="listCtrl.list.name" />
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+
+
+      </form>
+
+      <ol ng-init="listCtrl.getLists()">
+        <li ng-repeat="item in listCtrl.lists"><button type="submit" class="btn btn-primary" ng-click="listCtrl.deleteList(item._id)">Remove</button>
+          {{item.name}}
+        </li>
+      </ol>
+    </main>
+  </body>
+</html>
